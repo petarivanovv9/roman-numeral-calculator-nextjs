@@ -22,11 +22,46 @@ exports[`Home should match snapshot 1`] = `
             >
               Roman Calculator
             </h1>
-            <div
+            <main
               class="bg-white rounded-lg p-4"
             >
-              FORM
-            </div>
+              <form>
+                <div
+                  class="md:p-4"
+                >
+                  <label
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    Enter natural number:
+                  </label>
+                  <input
+                    class="placeholder-gray-400 leading-6 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm transition ease-in-out duration-100 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-offset-0"
+                    id="natural"
+                    name="natural"
+                    placeholder="Ex: 123"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="md:p-4"
+                >
+                  <button
+                    class="border border-transparent rounded text-white ring-gray-200 m-0.5 px-2.5 py-1.5 transition-all ease-in duration-75 hover:bg-gray-100 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 bg-indigo-500 text-white ring-indigo-500 hover:bg-indigo-600 w-full"
+                    type="submit"
+                  >
+                    Convert
+                  </button>
+                </div>
+              </form>
+              <div
+                class="md:p-4"
+              >
+                Result: 
+                <span>
+                  N/A
+                </span>
+              </div>
+            </main>
           </div>
         </div>
       </div>
