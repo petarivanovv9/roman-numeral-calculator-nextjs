@@ -1,5 +1,69 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #__next {
+    @apply h-full;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  label {
+    @apply mb-2;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    @apply mb-2 font-medium;
+  }
+
+  h1,
+  .h1 {
+    @apply text-5xl;
+  }
+
+  h2,
+  .h2 {
+    @apply text-4xl;
+  }
+
+  h3,
+  .h3 {
+    @apply text-3xl;
+  }
+
+  h4,
+  .h4 {
+    @apply text-2xl;
+  }
+
+  h5,
+  .h5 {
+    @apply text-xl;
+  }
+
+  h6,
+  .h6 {
+    @apply text-lg;
+  }
+
+  small,
+  .small {
+    @apply text-sm font-normal;
+  }
 }
