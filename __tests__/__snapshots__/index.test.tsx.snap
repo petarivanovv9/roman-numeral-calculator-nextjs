@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders homepage unchanged 1`] = `
+exports[`Home should match snapshot 1`] = `
 <div>
   <div
     class="h-full bg-blue-800"
