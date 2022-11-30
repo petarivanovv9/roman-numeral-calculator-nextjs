@@ -2,8 +2,35 @@
 
 exports[`renders homepage unchanged 1`] = `
 <div>
-  <div>
-    Roman Calculator
+  <div
+    class="h-full bg-blue-800"
+  >
+    <div
+      class="max-w-full h-full px-4"
+    >
+      <div
+        class="flex flex-wrap h-full justify-center"
+      >
+        <div
+          class="flex flex-row items-center xl:w-4/12 lg:w-6/12 sm:w-8/12 w-full"
+        >
+          <div
+            class="w-full"
+          >
+            <h1
+              class="mb-12 text-white text-center"
+            >
+              Roman Calculator
+            </h1>
+            <div
+              class="bg-white rounded-lg p-4"
+            >
+              FORM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
