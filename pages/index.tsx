@@ -1,7 +1,10 @@
-import { Formik, Field } from 'formik';
+import { Formik, Field, ErrorMessage } from 'formik';
 import { useState } from 'react';
 
+import { messages } from './constants';
 import { naturalToRoman } from './utils';
+
+const { msgRequiredInteger, msgRequiredPosInteger } = messages;
 
 export const testIds = {
   naturalInput: 'natural-input-field',
@@ -21,10 +24,24 @@ export default function Home() {
   const [romanNumber, setRomanNumber] = useState<string | null>(null);
 
   const handleFormSubmit = (values: FormValues) => {
-    const natural = parseInt(values.natural);
+    const natural = parseInt(values.natural, 10);
     const converted = naturalToRoman(natural);
 
     setRomanNumber(converted);
+  };
+
+  const validateNaturalFIeld = (value: string) => {
+    let error;
+
+    const natural = parseInt(value, 10);
+
+    if (!natural) {
+      error = messages.msgRequiredInteger;
+    } else if (natural <= 0) {
+      error = messages.msgRequiredPosInteger;
+    }
+
+    return error;
   };
 
   return (
@@ -45,8 +62,8 @@ export default function Home() {
                   initialValues={initialValues}
                   onSubmit={handleFormSubmit}
                 >
-                  {(formikProps) => (
-                    <form onSubmit={formikProps.handleSubmit}>
+                  {({ handleSubmit, errors }) => (
+                    <form onSubmit={handleSubmit}>
                       {/* Input Field */}
                       <div className="md:p-4">
                         <label
@@ -57,6 +74,7 @@ export default function Home() {
                         </label>
                         <Field
                           name="natural"
+                          validate={validateNaturalFIeld}
                           placeholder="Ex: 123"
                           data-testid={testIds.naturalInput}
                           className="placeholder-gray-400 leading-6 w-full px-3 py-2
@@ -66,6 +84,12 @@ export default function Home() {
                           focus:ring-1 focus:ring-offset-0"
                           autoFocus
                         />
+                        <ErrorMessage
+                          name="natural"
+                          render={(msg) => (
+                            <div className="block text-red-500">{msg}</div>
+                          )}
+                        />
                       </div>
                       {/* End Input Field */}
 
@@ -73,11 +97,12 @@ export default function Home() {
                       <div className="md:p-4">
                         <button
                           type="submit"
+                          disabled={!!errors.natural}
                           data-testid={testIds.submit}
                           className="border border-transparent rounded text-white ring-gray-200 m-0.5 px-2.5 py-1.5
                           transition-all ease-in duration-75 hover:bg-gray-100 hover:shadow-sm
                           focus:outline-none focus:ring-2 focus:ring-offset-2
-                          bg-indigo-500 text-white ring-indigo-500 hover:bg-indigo-600 w-full"
+                          bg-indigo-500 text-white ring-indigo-500 hover:bg-indigo-600 w-full disabled:opacity-50"
                         >
                           Convert
                         </button>
