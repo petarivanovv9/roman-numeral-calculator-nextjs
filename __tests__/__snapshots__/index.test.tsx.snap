@@ -3,7 +3,7 @@
 exports[`Home should match snapshot 1`] = `
 <div>
   <div
-    class="h-full bg-blue-800"
+    class="h-full bg-indigo-800"
   >
     <div
       class="max-w-full h-full px-4"

@@ -2,7 +2,7 @@ export default function Home() {
   const romanNumber = null;
 
   return (
-    <div className="h-full bg-blue-800">
+    <div className="h-full bg-indigo-800">
       {/* Container */}
       <div className="max-w-full h-full px-4">
         {/* Row */}
