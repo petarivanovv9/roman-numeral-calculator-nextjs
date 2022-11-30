@@ -5,7 +5,9 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "format": "prettier --write \"**/*.ts\" \"**/*.tsx\"",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "13.0.5",
@@ -17,8 +19,15 @@
     "@testing-library/react": "13.2.0",
     "@testing-library/user-event": "14.2.0",
     "@types/react": "18.0.9",
+    "eslint-config-next": "13.0.5",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-next": "0.0.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-testing-library": "5.9.1",
     "jest": "28.1.0",
     "jest-environment-jsdom": "28.1.0",
+    "prettier": "2.8.0",
+    "prettier-eslint": "15.0.1",
     "typescript": "4.6.4"
   }
 }
