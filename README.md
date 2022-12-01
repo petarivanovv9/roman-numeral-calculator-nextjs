@@ -6,11 +6,11 @@ More info about the Roman Number Calculator [here](https://en.wikipedia.org/wiki
 
 ### Desktop:
 
-![](screenshot-01.png)
+![](docs/screenshot-01.png)
 
 ### Mobile
 
-![](screenshot-02.png)
+![](docs/screenshot-02.png)
 
 ## Development
 
