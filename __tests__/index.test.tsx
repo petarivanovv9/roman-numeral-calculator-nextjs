@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import Home, { testIds } from '@/pages/index';
-import { messages } from '@/pages/constants';
+import { messages } from '../constants';
 
 const { msgRequiredInteger, msgRequiredPosInteger } = messages;
 

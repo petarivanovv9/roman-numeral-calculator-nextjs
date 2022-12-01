@@ -1,4 +1,4 @@
-import { naturalToRoman } from '../pages/utils';
+import { naturalToRoman } from '../utils';
 
 describe('utils', () => {
   describe('naturalToRoman', () => {

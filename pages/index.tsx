@@ -1,8 +1,8 @@
 import { Formik, Field, ErrorMessage } from 'formik';
 import { useState } from 'react';
 
-import { messages } from './constants';
-import { naturalToRoman } from './utils';
+import { messages } from '../constants';
+import { naturalToRoman } from '../utils';
 
 const { msgRequiredInteger, msgRequiredPosInteger } = messages;
 
