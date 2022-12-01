@@ -30,7 +30,7 @@ const Home = () => {
     setRomanNumber(converted);
   };
 
-  const validateNaturalFIeld = (value: string) => {
+  const validateNaturalField = (value: string) => {
     let error;
 
     const natural = parseInt(value, 10);
@@ -76,7 +76,7 @@ const Home = () => {
                         </label>
                         <Field
                           name="natural"
-                          validate={validateNaturalFIeld}
+                          validate={validateNaturalField}
                           placeholder="Ex: 123"
                           data-testid={testIds.naturalInput}
                           className="placeholder-gray-400 leading-6 w-full px-3 py-2
