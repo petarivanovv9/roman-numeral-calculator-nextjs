@@ -16,7 +16,7 @@ More info about the Roman Number Calculator [here](https://en.wikipedia.org/wiki
 
 To develop locally you need the following steps:
 
-### `npm run install`
+### `npm install`
 
 Install npm dependencies; you should run that regularly, preferably after every git pull, so that new and updated dependencies are installed locally.
 
