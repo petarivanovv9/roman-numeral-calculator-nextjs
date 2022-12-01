@@ -53,7 +53,9 @@ const Home = () => {
           {/* Col */}
           <div className="flex flex-row items-center xl:w-4/12 lg:w-6/12 sm:w-8/12 w-full">
             <div className="w-full">
-              <h1 className="mb-12 text-white text-center">Roman Calculator</h1>
+              <h1 className="mb-12 text-white text-center">
+                Roman Number Calculator
+              </h1>
 
               {/* Main Section */}
               <main className="bg-white rounded-lg p-4">

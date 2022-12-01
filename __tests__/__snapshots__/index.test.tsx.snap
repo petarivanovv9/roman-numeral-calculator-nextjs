@@ -20,7 +20,7 @@ exports[`Home should match snapshot 1`] = `
             <h1
               class="mb-12 text-white text-center"
             >
-              Roman Calculator
+              Roman Number Calculator
             </h1>
             <main
               class="bg-white rounded-lg p-4"
