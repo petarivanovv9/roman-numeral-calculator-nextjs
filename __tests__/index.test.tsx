@@ -23,6 +23,14 @@ describe('Home', () => {
     expect(await screen.findByText(/CCCXVII/)).toBeInTheDocument();
   });
 
+  it('should display `Must enter an integer!` when converting empty input', async () => {
+    render(<Home />);
+
+    await userEvent.click(screen.getByTestId(testIds.submit));
+
+    expect(await screen.findByText(msgRequiredInteger)).toBeInTheDocument();
+  });
+
   it('should display `Must enter an integer!` when converting `random`', async () => {
     render(<Home />);
 
