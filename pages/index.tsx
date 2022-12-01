@@ -20,7 +20,7 @@ const initialValues: FormValues = {
   natural: '',
 };
 
-export default function Home() {
+const Home = () => {
   const [romanNumber, setRomanNumber] = useState<string | null>(null);
 
   const handleFormSubmit = (values: FormValues) => {
@@ -127,4 +127,6 @@ export default function Home() {
       {/* End Container */}
     </div>
   );
-}
+};
+
+export default Home;
